@@ -65,10 +65,39 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="UI\AddBook.aspx" />
+    <Content Include="UI\IndexUI.aspx" />
+    <Content Include="UI\ShowBook.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\AddBook.aspx.cs">
+      <DependentUpon>AddBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\AddBook.aspx.designer.cs">
+      <DependentUpon>AddBook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\IndexUI.aspx.cs">
+      <DependentUpon>IndexUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\IndexUI.aspx.designer.cs">
+      <DependentUpon>IndexUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ShowBook.aspx.cs">
+      <DependentUpon>ShowBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ShowBook.aspx.designer.cs">
+      <DependentUpon>ShowBook.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BLL\" />
+    <Folder Include="DAL\" />
+    <Folder Include="Model\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
