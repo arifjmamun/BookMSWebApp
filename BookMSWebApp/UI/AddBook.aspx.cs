@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using BookMSWebApp.BLL;
 using BookMSWebApp.Model;
 
@@ -14,10 +9,7 @@ namespace BookMSWebApp.UI
         BookManager _bookManager = new BookManager();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-
-            }
+            
         }
 
         protected void saveButton_Click(object sender, EventArgs e)

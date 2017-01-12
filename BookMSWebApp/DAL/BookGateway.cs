@@ -77,5 +77,39 @@ namespace BookMSWebApp.DAL
                 Connection.Close();
             }
         }
+
+        public List<Book> GetTheBook(string pattern)
+        {
+            try
+            {
+                List<Book> books = new List<Book>();
+                const string query = "SELECT * FROM Book WHERE Name LIKE @Pattern";
+                Connection.Open();
+                Command.CommandText = query;
+                Command.Parameters.Clear();
+                Command.Parameters.AddWithValue("@Pattern", pattern);
+                Reader = Command.ExecuteReader();
+
+                if (Reader.HasRows)
+                {
+                    int rowSerial = 0;
+                    while (Reader.Read())
+                    {
+                        int serial = ++rowSerial;
+                        string isbn = Reader["ISBN"].ToString();
+                        string name = Reader["Name"].ToString();
+                        string author = Reader["Author"].ToString();
+                        Book book = new Book(serial, isbn, name, author);
+                        books.Add(book);
+                    }
+                    Reader.Close();
+                }
+                return books;
+            }
+            finally
+            {
+                Connection.Close();
+            }
+        }
     }
 }

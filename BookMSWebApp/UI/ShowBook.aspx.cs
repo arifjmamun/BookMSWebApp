@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 using BookMSWebApp.BLL;
 using BookMSWebApp.Model;
 
 namespace BookMSWebApp.UI
 {
-    public partial class ShowBook : System.Web.UI.Page
+    public partial class ShowBook : Page
     {
         BookManager _bookManager = new BookManager();
         protected void Page_Load(object sender, EventArgs e)
@@ -35,7 +32,9 @@ namespace BookMSWebApp.UI
 
         private void ShowTheBook(string pattern)
         {
-            
+            List<Book> books = _bookManager.GetTheBook(pattern);
+            showBookGridView.DataSource = books;
+            showBookGridView.DataBind();
         }
 
         private void ShowAllBooks()

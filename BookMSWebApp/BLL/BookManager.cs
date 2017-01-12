@@ -36,5 +36,11 @@ namespace BookMSWebApp.BLL
         {
             return _bookGateway.GetAllBooks();
         }
+
+        public List<Book> GetTheBook(string pattern)
+        {
+            pattern = @"%"+pattern+"%";
+            return _bookGateway.GetTheBook(pattern);
+        }
     }
 }
