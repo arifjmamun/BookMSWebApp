@@ -42,6 +42,10 @@
         legend {
             font-size: 25px;
         }
+        .msg-label {
+            line-height: 20px;
+            font-size: 13px;
+        }
     </style>
 </head>
 <body>
@@ -79,11 +83,12 @@
                         
                     </td>
                     <td>
-                        <asp:Button ID="saveButton" runat="server" Text="Save" CssClass="pull-right"/>
+                        <asp:Button ID="saveButton" runat="server" Text="Save" CssClass="pull-right" OnClick="saveButton_Click"/>
                     </td>
                 </tr>
             </table>
-        </fieldset>    
+            <asp:Label ID="msgLabel" runat="server" CssClass="msg-label"></asp:Label>
+        </fieldset>        
     </div>
     </form>
 </body>

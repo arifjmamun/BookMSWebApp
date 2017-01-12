@@ -49,8 +49,8 @@
                     <fieldset>
                         <legend>Index</legend>
                         <ul>
-                            <li><a href="AddBook.aspx">Add Book</a></li>
-                            <li><a href="ShowBook.aspx">Show Book</a></li>
+                            <li><a href="AddBook.aspx" target="_blank">Add Book</a></li>
+                            <li><a href="ShowBook.aspx" target="_blank">Show Book</a></li>
                         </ul>
                     </fieldset>
                 </td>

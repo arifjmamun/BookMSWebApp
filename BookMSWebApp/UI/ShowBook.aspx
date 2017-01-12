@@ -11,7 +11,7 @@
         }
         body {
             width: 100%;
-            margin-top: 200px;
+            margin-top: 100px;
             margin-left: 0;
             margin-right: 0;
         }
@@ -35,11 +35,11 @@
             height: 20px;
             min-width: 200px;
         }
-        .auto-style1 {
-            width: 70px;
-        }
         legend {
             font-size: 25px;
+        }
+        .gridview {
+            font-size: 14px;
         }
     </style>
 </head>
@@ -58,11 +58,12 @@
                             <asp:TextBox ID="nameTextBox" runat="server"></asp:TextBox>
                         </td>
                         <td>
-                            <asp:Button ID="searchButton" runat="server" Text="Search" CssClass="pull-right" />
+                            <asp:Button ID="searchButton" runat="server" Text="Search" CssClass="pull-right" OnClick="searchButton_Click" />
                         </td>
                     </tr>
                 </table>
-                <asp:GridView ID="showBookGridView" runat="server" Width="100%" AutoGenerateColumns="False" ShowHeaderWhenEmpty="True" GridLines="Both">
+                <br />
+                <asp:GridView ID="showBookGridView" runat="server" Width="100%" AutoGenerateColumns="False" ShowHeaderWhenEmpty="True" GridLines="Both" CssClass="gridview">
                     <Columns>
                         <asp:TemplateField HeaderText="SL#">
                             <ItemTemplate><%#Eval("Serial") %></ItemTemplate>
@@ -78,6 +79,7 @@
                         </asp:TemplateField>
                     </Columns>
                     <EmptyDataTemplate>No book availabe.</EmptyDataTemplate>
+                    <HeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="Medium"/>
                 </asp:GridView>
             </fieldset>
         </div>
