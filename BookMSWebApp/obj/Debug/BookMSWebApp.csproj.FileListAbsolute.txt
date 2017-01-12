@@ -1,0 +1,5 @@
+H:\BASIS\Personal\DB and Layer Arch Practice\BookMSWebApp\BookMSWebApp\bin\BookMSWebApp.dll.config
+H:\BASIS\Personal\DB and Layer Arch Practice\BookMSWebApp\BookMSWebApp\bin\BookMSWebApp.dll
+H:\BASIS\Personal\DB and Layer Arch Practice\BookMSWebApp\BookMSWebApp\bin\BookMSWebApp.pdb
+H:\BASIS\Personal\DB and Layer Arch Practice\BookMSWebApp\BookMSWebApp\obj\Debug\BookMSWebApp.dll
+H:\BASIS\Personal\DB and Layer Arch Practice\BookMSWebApp\BookMSWebApp\obj\Debug\BookMSWebApp.pdb
